@@ -1,0 +1,224 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+/*--- header ---*/
+
+.header {
+
+    padding: 15px;
+    position: center;
+    top: 0;
+    width: 100%;
+}
+
+.header__nav ul {
+    background-color: coral;
+    display: flex;
+    justify-content: space-evenly;
+    font-size: 1rem;
+    padding: 30px;
+}
+
+@media (min-width: 768px) {
+    .header {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .header__nav {
+        width: 60%;
+    }
+}
+
+/* --- Contenedor Main Index ---*/
+
+@media (min-width: 1200px) {
+    .main-index {
+        display: grid;
+        grid-template-columns: 80% 20%;
+        grid-template-rows: repeat (3, auto);
+        grid-template-areas:
+            "portada portada"
+            "productos mision"
+            "ubicacion redes";
+    }
+}
+
+.portada {
+    grid-area: portada;
+    height: 100vh;
+    background-image: url(../assets/img/bg-1.jpg);
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    font-style: oblique;
+    font-size: 3rem;
+    color: blue;
+    font-size: 3rem;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.primertitulo {
+    color: cornflowerblue;
+    font-style: inherit;
+    text-align: center;
+    font-size: 3.5rem;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    padding: 2rem;
+}
+
+.contenido {
+    color: black;
+    font-style: normal;
+    text-align: justify;
+    font-style: normal;
+    font-size: 1.5rem;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 2rem;
+
+}
+
+/* --- Productos --- */
+
+.productos {
+    grid-area: productos;
+}
+
+.productos__titulo {
+    background-color:coral;
+    padding: 15px;
+    text-align: center;
+
+}
+
+/* --- Slider --- */
+
+.slider {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    padding: 15px;
+    overflow: auto;
+     background-image: url(../assets/img/bg-1.jpg);
+    background-position: center;
+    background-size: cover;
+
+}
+
+/* --- tarjeta --- */
+.tarjeta {
+    border: 2px solid black;
+    border-radius: 15px;
+    background-color: cornflowerblue;
+    width: 450px;
+    height: 250px;
+    display: flex;
+    padding: 10px;
+}
+
+
+.tarjeta__img {
+    width: 50%;
+    height: 50%;
+    border-radius: 15px;
+    padding: 10px;
+}
+
+.tarjeta__info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.tarjeta__button{
+    border: 2px solid crimson;
+    background-color: crimson;
+    border-radius: 10px;
+    color: white;
+    padding: 10px 15px;
+    
+     }
+    
+     .tarjeta__button:hover{
+        border: 2px solid crimson;
+    background-color: white;
+    color: crimson;
+     }
+
+
+@media (min-width: 1200px) {
+    .slider {
+        overflow: visible;
+        flex-wrap: wrap;
+        padding: 0;
+        gap: 10px;
+    }
+}
+
+/* --- Ubicacion --- */
+
+.ubicacion {
+    grid-area: ubicacion;
+}
+
+.ubicacion__titulo {
+    background-color: coral;
+    padding: 15px;
+    text-align: center;
+}
+
+.ubicacion__mapa {
+    width: 100%;
+}
+
+/* ---Footer ---*/
+.pie {
+    height: 4rem;
+    background-color: coral;
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5rem;
+}
+
+/* --- Redes ---*/
+
+.redes {
+    grid-area: redes;
+}
+
+.redes__titulo {
+    padding: 15px;
+    text-align: end;
+}
+
+.redes__iconos {
+    display: flex;
+    justify-content: space-around
+}
+
+.redes__iconos i {
+    color: coral;
+    font-size: 2.5rem;
+}
+
+@media (min-width: 1200px) {
+    .redes__iconos {
+        flex-direction: row;
+        text-align: center;
+        height: 100%;
+    }
+}
